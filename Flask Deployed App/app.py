@@ -14,7 +14,7 @@ disease_info = pd.read_csv('disease_info.csv', encoding='cp1252')
 supplement_info = pd.read_csv('supplement_info.csv', encoding='cp1252')
 
 # Load the Keras model
-model = tf.keras.models.load_model('modul.keras')
+model = tf.keras.models.load_model('modul1.keras')
 
 # Prediction function
 def model_prediction(test_image):
