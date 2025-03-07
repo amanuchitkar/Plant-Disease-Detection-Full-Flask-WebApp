@@ -1,0 +1,31 @@
+{
+    "Apple___Apple_scab": {
+      "ideal_temp": [18, 24],
+      "max_temp": 30,
+      "min_temp": 10,
+      "ideal_humidity": [60, 75],
+      "rainfall": [50, 100],
+      "sunlight": "Full sun",
+      "soil_ph": [6.0, 6.5],
+      "avoid_conditions": ["high humidity", "wet leaves"]
+    },
+    "Tomato___Early_blight": {
+      "ideal_temp": [20, 30],
+      "max_temp": 35,
+      "min_temp": 15,
+      "ideal_humidity": [50, 70],
+      "rainfall": [25, 75],
+      "sunlight": "Full sun",
+      "soil_ph": [5.5, 6.8],
+      "avoid_conditions": ["overhead watering"]
+    },
+    "Corn_(maize)___Common_rust_": {
+      "ideal_temp": [20, 28],
+      "max_temp": 35,
+      "min_temp": 15,
+      "ideal_humidity": [65, 85],
+      "rainfall": [50, 150],
+      "sunlight": "Full sun",
+      "soil_ph": [5.8, 7.0]
+    }
+  }

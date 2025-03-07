@@ -1,201 +1,374 @@
 {% extends 'base.html' %}
 {% block pagetitle %}
-Plant Disease Detection
+Plant Disease Detection System | GreenScan AI
 {% endblock pagetitle %}
 {% block body %}
+
+<!-- Hero Section -->
+<section class="hero position-relative text-white py-5" style="background:url('../static/heroimage.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center;">
+  <div class="container text-center">
+    <h1 class="display-3 fw-bold mb-3 animate-text">🌿 Protect Your Crops with AI</h1>
+    <p class="lead mb-4 animate-text">Instantly identify 38+ plant diseases across 14 different crops. Early detection for healthier harvests.</p>
+    <a href="/index" class="btn btn-light btn-lg px-5 shadow-sm animate-button">🌱 Scan Your Plants Now</a>
+  </div>
+  
+  <!-- <div class="image-container position-absolute bottom-0 start-50 translate-middle-x d-flex gap-4 p-3">
+    <div class="card shadow-lg border-0" style="width: 220px;">
+      <img src="../static/PotatoHealthy1.JPG" alt="Healthy Plant" class="card-img-top rounded-top">
+      <div class="card-body text-center">
+        <h6 class="fw-bold text-success">Healthy Plant</h6>
+      </div>
+    </div>
+    <div class="card shadow-lg border-0" style="width: 220px;">
+      <img src="../static/PotatoEarlyBlight2.JPG" alt="Diseased Plant" class="card-img-top rounded-top">
+      <div class="card-body text-center">
+        <h6 class="fw-bold text-danger">Diseased Plant</h6>
+      </div>
+    </div>
+  </div> -->
+  
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(7, 49, 7, 0.6);"></div>
+</section>
+
+
+
+
+<!-- Key Features -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Choose NatureX AI?</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-success">
+          <div class="card-body text-center">
+            <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+            <h5 class="card-title">Comprehensive Detection</h5>
+            <p class="card-text">Accurate identification of 38+ diseases across fruits, vegetables, and crops</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-success">
+          <div class="card-body text-center">
+            <i class="fas fa-clock fa-3x text-success mb-3"></i>
+            <h5 class="card-title">Instant Results</h5>
+            <p class="card-text">Real-time analysis with 98.7% accuracy using deep learning technology</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-success">
+          <div class="card-body text-center">
+            <i class="fas fa-mobile-alt fa-3x text-success mb-3"></i>
+            <h5 class="card-title">Mobile-Friendly</h5>
+            <p class="card-text">Accessible on any device for field use with expert treatment recommendations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-success">🦠 Detectable Diseases</h2>
+    <div class="row g-4">
+      <!-- Fruit Diseases -->
+      <div class="col-md-6">
+        <div class="card border-success shadow-sm">
+          <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">🍎 Fruit Diseases</h5>
+            <i class="bi bi-virus"></i>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Apple Scab</li>
+            <li class="list-group-item">Black Rot (Apple)</li>
+            <li class="list-group-item">Cedar Apple Rust</li>
+            <li class="list-group-item">Powdery Mildew (Cherry)</li>
+            <li class="list-group-item">Black Rot (Grape)</li>
+            <li class="list-group-item">Esca (Black Measles) - Grape</li>
+            <li class="list-group-item">Leaf Blight (Grape)</li>
+            <li class="list-group-item">Citrus Greening (Orange)</li>
+            <li class="list-group-item">Peach Bacterial Spot</li>
+            <li class="list-group-item">Strawberry Leaf Scorch</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Vegetable & Crop Diseases -->
+      <div class="col-md-6">
+        <div class="card border-success shadow-sm">
+          <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">🌿 Vegetable & Crop Diseases</h5>
+            <i class="bi bi-bug"></i>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cercospora Leaf Spot (Corn)</li>
+            <li class="list-group-item">Common Rust (Corn)</li>
+            <li class="list-group-item">Northern Leaf Blight (Corn)</li>
+            <li class="list-group-item">Bacterial Spot (Pepper Bell)</li>
+            <li class="list-group-item">Early Blight (Potato)</li>
+            <li class="list-group-item">Late Blight (Potato)</li>
+            <li class="list-group-item">Powdery Mildew (Squash)</li>
+            <li class="list-group-item">Bacterial Spot (Tomato)</li>
+            <li class="list-group-item">Early Blight (Tomato)</li>
+            <li class="list-group-item">Late Blight (Tomato)</li>
+            <li class="list-group-item">Leaf Mold (Tomato)</li>
+            <li class="list-group-item">Septoria Leaf Spot (Tomato)</li>
+            <li class="list-group-item">Spider Mites (Tomato)</li>
+            <li class="list-group-item">Target Spot (Tomato)</li>
+            <li class="list-group-item">Tomato Yellow Leaf Curl Virus</li>
+            <li class="list-group-item">Tomato Mosaic Virus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Disease List (Collapsible) -->
+    <div class="text-center mt-4">
+      <button class="btn btn-outline-success" data-bs-toggle="collapse" data-bs-target="#full-list">
+        View Full Disease List
+      </button>
+    </div>
+    
+    <div class="collapse mt-3" id="full-list">
+      <div class="card border-success shadow-sm">
+        <div class="card-header bg-success text-white text-center">
+          <h5>📜 Complete Disease List</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Healthy Apple</li>
+          <li class="list-group-item">Healthy Blueberry</li>
+          <li class="list-group-item">Healthy Cherry</li>
+          <li class="list-group-item">Healthy Corn</li>
+          <li class="list-group-item">Healthy Grape</li>
+          <li class="list-group-item">Healthy Peach</li>
+          <li class="list-group-item">Healthy Pepper Bell</li>
+          <li class="list-group-item">Healthy Potato</li>
+          <li class="list-group-item">Healthy Raspberry</li>
+          <li class="list-group-item">Healthy Soybean</li>
+          <li class="list-group-item">Healthy Strawberry</li>
+          <li class="list-group-item">Healthy Tomato</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Plant Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-success">🌿 Supported Crops & Diseases</h2>
+    <div class="row g-4">
+      {% for plant in [
+        {'name': 'Apple', 'image': 'https://www.grasshoppergardens.com/wp-content/uploads/2022/10/shutterstock_1508722937-scaled.jpg', 
+         'diseases': ['Scab', 'Black Rot', 'Cedar Rust', 'Healthy']},
+        {'name': 'Tomato', 'image': 'https://th.bing.com/th/id/R.92261ab728efbd39175a83164144ffee?rik=8ChFsUKpVWgysA&riu=http%3a%2f%2fcherryblossomlife.com%2fwp-content%2fuploads%2f2019%2f04%2ftomato-plant-care-1.jpg&ehk=fsDurDdoUa3ZuU8b0SjC10RWQN6UhFGFjjuJ68PWH%2fA%3d&risl=&pid=ImgRaw&r=0',
+         'diseases': ['Early Blight', 'Late Blight', 'Leaf Mold', 'Target Spot', 'Healthy']},
+        {'name': 'Corn', 'image': 'https://th.bing.com/th/id/OIP.yVRW8ynrL0qK8tbLrDBANAHaE8?rs=1&pid=ImgDetMain',
+         'diseases': ['Gray Leaf Spot', 'Common Rust', 'Northern Blight', 'Healthy']},
+        {'name': 'Grape', 'image': 'https://images.esellerpro.com/3048/I/632/23/Grapes-Red-2.jpg',
+         'diseases': ['Black Rot', 'Esca', 'Leaf Blight', 'Healthy']},
+        {'name': 'Potato', 'image': 'https://www.farmersalmanac.com/wp-content/uploads/2020/11/potato-crop-AdobeStock_274122906-1024x683.jpeg',
+         'diseases': ['Early Blight', 'Late Blight', 'Healthy']},
+        {'name': 'Strawberry', 'image': 'https://fthmb.tqn.com/smOx93Jvi7JguN4uFf9Yv6ck-fY=/2066x1452/filters:fill%28auto,1%29/Strawberryplant-GettyImages-123533002-5b198b33eb97de0036be58ae.jpg',
+         'diseases': ['Leaf Scorch', 'Healthy']},
+        {'name': 'Peach', 'image': 'https://cdn.mos.cms.futurecdn.net/NUXtLpfx8buxfMKoKWd5qe.jpg',
+         'diseases': ['Bacterial Spot', 'Healthy']},
+        {'name': 'Bell Pepper', 'image': 'https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/1/27/1/shutterstock_1718379988.jpg.rend.hgtvcom.1280.853.suffix/1643327070208.jpeg',
+         'diseases': ['Bacterial Spot', 'Healthy']}
+      ] %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-success shadow-sm">
+          <img src="{{ plant.image }}" class="card-img-top" alt="{{ plant.name }}" style="height: 200px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold text-success">{{ plant.name }}</h5>
+            
+            <div class="mt-3" id="diseases-{{ loop.index }}">
+              {% for disease in plant.diseases %}
+              <span class="badge bg-success  text-white mb-1">{{ disease }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="card-footer bg-transparent text-center">
+            <small class="text-muted">{{ plant.diseases|length }} detectable conditions</small>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+<!-- How It Works -->
+<section class="py-5" style="background: linear-gradient(135deg, #f8fff9 0%, #e8f5e9 100%);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3 text-success">Smart Crop Protection System</h2>
+      <p class="lead text-muted">From detection to solution in 4 simple steps</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Step 1 - Image Upload -->
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card bg-white p-4 rounded-4 shadow-sm h-100 transition-all">
+          <div class="step-icon bg-success bg-gradient mb-3">
+            <i class="fas fa-camera fa-2x text-white"></i>
+          </div>
+          <div class="step-number text-success fw-bold mb-2">Step 1</div>
+          <h5 class="text-success mb-3">Leaf Image Capture</h5>
+          <p class="text-muted">Upload clear photos of affected plant leaves through our secure portal</p>
+          <div class="badge bg-success bg-opacity-10 text-success">JPG/PNG Supported</div>
+        </div>
+      </div>
+
+      <!-- Step 2 - AI Analysis -->
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card bg-white p-4 rounded-4 shadow-sm h-100">
+          <div class="step-icon bg-success bg-gradient mb-3">
+            <i class="fas fa-brain fa-2x text-white"></i>
+          </div>
+          <div class="step-number text-success fw-bold mb-2">Step 2</div>
+          <h5 class="text-success mb-3">AI Disease Detection</h5>
+          <p class="text-muted">Deep learning algorithms analyze patterns in leaf morphology</p>
+          <div class="badge bg-success bg-opacity-10 text-success">Real-time Processing</div>
+        </div>
+      </div>
+
+      <!-- Step 3 - Weather Analysis -->
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card bg-white p-4 rounded-4 shadow-sm h-100">
+          <div class="step-icon bg-success bg-gradient mb-3">
+            <i class="fas fa-cloud-sun fa-2x text-white"></i>
+          </div>
+          <div class="step-number text-success fw-bold mb-2">Step 3</div>
+          <h5 class="text-success mb-3">Environmental Scan</h5>
+          <p class="text-muted">Integrated weather data analysis for localized disease patterns</p>
+          <div class="badge bg-success bg-opacity-10 text-success">Microclimate Aware</div>
+        </div>
+      </div>
+
+      <!-- Step 4 - Solution -->
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card bg-white p-4 rounded-4 shadow-sm h-100">
+          <div class="step-icon bg-success bg-gradient mb-3">
+            <i class="fas fa-prescription-bottle fa-2x text-white"></i>
+          </div>
+          <div class="step-number text-success fw-bold mb-2">Step 4</div>
+          <h5 class="text-success mb-3">Smart Recommendations</h5>
+          <p class="text-muted">Personalized treatment plans with organic supplement options</p>
+          <div class="badge bg-success bg-opacity-10 text-success">Eco-friendly Solutions</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center mt-5">
+      <a href="/index" class="btn btn-success btn-lg px-5 rounded-pill">
+        <i class="fas fa-seedling me-2"></i>Start Diagnosis
+      </a>
+    </div>
+  </div>
+</section>
+
 <style>
-  body {
-    overflow-x: hidden;
-  }
-
-  @media only screen and (max-width: 830px) {
-    .laptop {
-      display: none;
-    }
-  }
-
-  @media (min-width: 830px) and (max-width: 1536px) {
-    .mobile {
-      display: none;
-    }
-  }
-
-  .fruit-card img {
-    width: 100%;
-    height: 250px;  /* Fixed height for consistency */
-    object-fit: cover;  /* Ensures the image fits without distortion */
-    border-radius: 10px;  /* Add border-radius to make the image corners rounded */
-  }
-
-  .fruit-card {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .img-placeholder {
-    background-color: #f0f0f0;
-    width: 100%;
-    height: 250px;  /* Fallback height */
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 10px; /* Matching the image border-radius */
+    transition: transform 0.3s ease;
+  }
+
+  .step-card {
+    border: 1px solid rgba(25, 135, 84, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(25, 135, 84, 0.3);
+  }
+
+  .step-card:hover .step-icon {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
+  .transition-all {
+    transition: all 0.3s ease;
+  }
+
+  .bg-success.bg-gradient {
+    background: linear-gradient(45deg, #1b5e20, #2e7d32) !important;
   }
 </style>
 
-<!-- <div class="mobile p-5">
-  <div class="row mb-5 text-center text-white">
-    <div class="col-lg-10 mx-auto">
-      <h1 class="display-4" style="padding-top: 2%; font-weight: 400; color: red;"><b>Note✍🏻</b></h1>
-      <p class="lead" style="font-weight: 500; color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
-      <p class="lead" style="font-weight: 500; color: black;">Thank You 🤝</p>    
-    </div>
-  </div>
-</div> -->
+<style>
+  
+  .hero {
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+    
+  }
 
-<div class="row mb-5 text-center text-white laptop">
-  <div class="col-lg-10 mx-auto">
-    <h1 class="display-4" style="padding-top: 2%; font-weight: 400; color: rgb(4, 54, 4);"><b>🍁Plant Disease Detection🍁</b></h1>
-    <p class="lead" style="font-weight: 500; color: black;">This AI Engine Will Help To Detect Disease From Following Fruits And Veggies</p>
-  </div>
-</div>
+  .animate-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
 
-<center class="laptop">
-  <a href="/index">
-    <button class="bttn-pill bttn-lg btn-success"><b style="color: black;">Upload Image to AI</b></button>
-  </a>
-</center>
+  .animate-button {
+    display: inline-block;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
 
-<div class="row p-5 laptop">
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://post.healthline.com/wp-content/uploads/2020/09/Do_Apples_Affect_Diabetes_and_Blood_Sugar_Levels-732x549-thumbnail-1-732x549.jpg" 
-           alt="Apple" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Apple</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://www.supermarketperimeter.com/ext/resources/0430-blueberries.png?t=1588260305&width=1080" 
-           alt="Blueberry" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Blueberry</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/health_benefits_of_cherries_slideshow/1800x1200_health_benefits_of_cherries_slideshow.jpg" 
-           alt="Cherry" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Cherry</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://i.ndtvimg.com/i/2015-09/grapes_625x350_61443376353.jpg" 
-      alt="Grape" 
-      onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Grape</p>
-    </div>
-  </div>
-</div>
+  .animate-button:hover {
+    transform: scale(1.1);
+    background: #28a745;
+    color: white;
+  }
 
-<div class="row p-5 laptop">
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://cdn.mos.cms.futurecdn.net/uMVmMrt4gYY28bmepYvmJ5.jpg" 
-           alt="Corn" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Corn</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://th.bing.com/th/id/OIP.fYYYEYkYKvJX3TQtF5ssIQHaE8?w=292&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" 
-           alt="Orange" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Orange</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/the_health_benefits_of_peaches_slideshow/thinkstock_rf_peaches.jpg?resize=650px:*" 
-           alt="Peach" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Peach</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://th.bing.com/th/id/OIP.iKKOYUvcgZGOKZnCNK2EAwHaE8?rs=1&pid=ImgDetMain" 
-           alt="Pepper Bell" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Pepper Bell</p>
-    </div>
-  </div>
-</div>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-<div class="row p-5 laptop">
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://m.economictimes.com/thumb/height-450,width-600,imgsize-111140,msid-72862126/potato-getty.jpg" 
-           alt="Potato" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Potato</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/326/326272/raspberries-with-ketones-in-a-bowl.jpg?w=1155&h=1541" 
-           alt="Raspberry" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Raspberry</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://m.economictimes.com/thumb/msid-66988154,width-1200,height-900,resizemode-4,imgsize-211276/soyabean-agencies.jpg" 
-           alt="Soybean" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Soybean</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="fruit-card">
-      <img src="https://post.healthline.com/wp-content/uploads/2020/08/squash-fruit-or-vegetable-732x549-thumbnail-732x549.jpg" 
-           alt="Squash" 
-           onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-      <p class="lead" style="font-weight: 500; color: black;">Squash</p>
-    </div>
-  </div>
-</div>
+  .overlay {
+    z-index: -1;
+  }
 
-<center class="laptop">
-  <div class="row p-5">
-    <div class="col">
-      <div class="fruit-card">
-        <img src="https://images.indianexpress.com/2020/02/strawberry-1200.jpg" 
-             alt="Strawberry" 
-             onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-        <p class="lead" style="font-weight: 500; color: black;">Strawberry</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="fruit-card">
-        <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg" 
-             alt="Tomato" 
-             onerror="this.onerror=null;this.src='https://via.placeholder.com/250x250?text=Image+Not+Available';">
-        <p class="lead" style="font-weight: 500; color: black;">Tomato</p>
-      </div>
-    </div>
-  </div>
-</center>
+  .plant-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-width: 2px;
+  }
+
+  .plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  }
+
+  .disease-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .badge {
+    font-size: 0.75em;
+    padding: 0.35em 0.65em;
+  }
+</style>
 
 {% endblock body %}
